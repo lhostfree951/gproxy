@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Information</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS for Dark Mode -->
+    <style>
+        body {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .proxy-container {
+            background-color: #454d55;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .proxy-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .proxy-details {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .copy-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="proxy-container animated fadeInLeft">
+                    <div class="proxy-title">Proxy 1 Alemanha</div>
+                    <div class="proxy-details">
+                        <p>Endereço: 3.66.38.117</p>
+                        <p>Porta: 19690</p>
+                        <p>Status: Sem Limite</p>
+                    </div>
+                    <button class="copy-button" data-clipboard-text="3.66.38.117:19690">Copiar</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="proxy-container animated fadeInRight">
+                    <div class="proxy-title">Proxy 2 Alemanha</div>
+                    <div class="proxy-details">
+                        <p>Endereço: 18.197.239.109</p>
+                        <p>Porta: 10657</p>
+                        <p>Status: Sem Limite</p>
+                    </div>
+                    <button class="copy-button" data-clipboard-text="18.197.239.109:10657">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and Popper.js Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Clipboard.js for Copy Button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+    <!-- Custom JavaScript for Copy Button -->
+    <script>
+        new ClipboardJS('.copy-button');
+
+        $('.copy-button').on('click', function () {
+            $(this).text('Copiado!').addClass('btn-success');
+        });
+    </script>
+</body>
+</html>
